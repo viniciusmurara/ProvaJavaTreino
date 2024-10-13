@@ -14,13 +14,20 @@ public class Cliente {
     }
 
     // metodo que retorna o historico de alugueis do cliente
-    public String listarHistoricoAlugueis(){
-        String lista = "\nHistorico de Alugueis do(a) cliente " + this.nome;
-        for(Aluguel aluguel : historicoAlugueis){
-            lista += "\n" + aluguel.getVeiculo().getMarca() +" "+ aluguel.getVeiculo().getModelo() +" "+ aluguel.getVeiculo().getAno();
-            lista += "\npor " + aluguel.getDiasAlugados() + " dias";
-            lista += "\ntotalizando um valor de R$" + aluguel.calcularValorTotal() + " reais\n";
+    public String listarHistoricoAlugueis() {
+        String lista = "Historico de Alugueis do(a) cliente " + this.nome;
+
+        for (Aluguel aluguel : historicoAlugueis) {
+            // adicionando verificações para Carro e Moto
+            if (aluguel.getVeiculo() instanceof Carro) {
+                lista += "\nCarro: " + aluguel.getVeiculo().getMarca() +" "+ aluguel.getVeiculo().getModelo() +" "+ aluguel.getVeiculo().getAno();
+            } else if (aluguel.getVeiculo() instanceof Moto) {
+                lista += "\nMoto: " + aluguel.getVeiculo().getMarca() +" "+ aluguel.getVeiculo().getModelo() +" "+ aluguel.getVeiculo().getAno();
+            }
+            lista += "\nPor " + aluguel.getDiasAlugados() + " dias";
+            lista += "\nTotalizando um valor de R$" + aluguel.calcularValorTotal() + " reais\n";
         }
+
         return lista;
     }
 
@@ -30,5 +37,13 @@ public class Cliente {
 
     public String getNome() {
         return nome;
+    }
+
+    @Override
+    public String toString() {
+        return "\nCliente: " +
+                "\nnome: " + nome +
+                "\ncpf: " + cpf +
+                "\n" + listarHistoricoAlugueis();
     }
 }

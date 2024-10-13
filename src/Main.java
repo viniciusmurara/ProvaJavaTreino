@@ -29,7 +29,7 @@ public class Main {
         System.out.println(carro.detalhesVeiculo());
         System.out.println(moto.detalhesVeiculo());
 
-        System.out.println(cliente1.listarHistoricoAlugueis());
-        System.out.println(cliente2.listarHistoricoAlugueis());
+        System.out.println(cliente1);
+        System.out.println(cliente2);
     }
 }
