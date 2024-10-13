@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public abstract class Veiculo {
     private String placa, marca, modelo;
     private int ano;
