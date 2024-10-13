@@ -4,7 +4,6 @@ public class Loja {
     private ArrayList<Cliente> clientes = new ArrayList<>();
     private ArrayList<Veiculo> veiculosDisponiveis = new ArrayList<>();
     private ArrayList<Aluguel> alugueis = new ArrayList<>();
-    private Veiculo veiculo;
 
     public void adicionarVeiculos(Veiculo veiculo){
         veiculosDisponiveis.add(veiculo);
