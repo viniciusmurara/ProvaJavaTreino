@@ -38,10 +38,10 @@ public class Loja {
     public String gerarRelatorio(){
         String lista = "\nRelatório de Alugueis: ";
         for(Aluguel aluguel : alugueis){
-            lista += "\n\nCliente: " + aluguel.getCliente().getNome();
+            lista += "\nCliente: " + aluguel.getCliente().getNome();
             lista += "\nAlugou um " + aluguel.getVeiculo().getMarca() +" "+ aluguel.getVeiculo().getModelo() +" "+ aluguel.getVeiculo().getAno();
             lista += "\nPor " + aluguel.getDiasAlugados() + " dias";
-            lista += "\nTotalizando um valor de R$" + aluguel.calcularValorTotal() + " reais";
+            lista += "\nTotalizando um valor de R$" + aluguel.calcularValorTotal() + " reais\n";
         }
         return lista;
     }
