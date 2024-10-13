@@ -19,9 +19,11 @@ public class Main {
 
         Aluguel aluguel1 = new Aluguel(cliente1, carro, 3);
         Aluguel aluguel2 = new Aluguel(cliente2, moto, 6);
+        Aluguel aluguel3 = new Aluguel(cliente2, carro, 10);
 
         loja.realizarAluguel(aluguel1);
         loja.realizarAluguel(aluguel2);
+        loja.realizarAluguel(aluguel3);
         System.out.println(loja.gerarRelatorio());
 
         System.out.println(carro.detalhesVeiculo());

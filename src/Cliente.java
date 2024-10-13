@@ -15,9 +15,9 @@ public class Cliente {
 
     // metodo que retorna o historico de alugueis do cliente
     public String listarHistoricoAlugueis(){
-        String lista = "\nHistorico de Alugueis do cliente " + this.nome;
+        String lista = "\nHistorico de Alugueis do(a) cliente " + this.nome;
         for(Aluguel aluguel : historicoAlugueis){
-            lista += aluguel.getVeiculo().getMarca() +" "+ aluguel.getVeiculo().getModelo() +" "+ aluguel.getVeiculo().getAno();
+            lista += "\n" + aluguel.getVeiculo().getMarca() +" "+ aluguel.getVeiculo().getModelo() +" "+ aluguel.getVeiculo().getAno();
             lista += "\npor " + aluguel.getDiasAlugados() + " dias";
             lista += "\ntotalizando um valor de R$" + aluguel.calcularValorTotal() + " reais\n";
         }

@@ -41,7 +41,7 @@ public class Loja {
             lista += "\nCliente: " + aluguel.getCliente().getNome();
             lista += "\nAlugou um " + aluguel.getVeiculo().getMarca() +" "+ aluguel.getVeiculo().getModelo() +" "+ aluguel.getVeiculo().getAno();
             lista += "\nPor " + aluguel.getDiasAlugados() + " dias";
-            lista += "\nTotalizando um valor de R$" + aluguel.calcularValorTotal() + " reais\n";
+            lista += "\nTotalizando um valor de R$" + aluguel.calcularValorTotal() + " reais";
         }
         return lista;
     }
