@@ -3,7 +3,7 @@ public class Main {
         Veiculo carro = new Carro("qjh223", "honda", "civic", 2023, 120.0, 4, "flex");
         Veiculo moto = new Moto("hgr123", "honda", "bis", 2022, 70.0, 100);
 
-        Cliente cliente1 = new Cliente("Vinicius", "131.689.139-95");
+        Cliente cliente1 = new Cliente("Vinicius", "987.685.765-85");
         Cliente cliente2 = new Cliente("Stéfany", "123.456.789-99");
 
         Loja loja = new Loja();
